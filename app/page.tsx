@@ -6,15 +6,19 @@ import Logo from './components/logo/Logo';
 import { useAuth } from './AuthContext';
 
 export default function Home() {
-    const { isAuthenticated } = useAuth();
+    const { isAuthenticated, operatorId } = useAuth();
     return (
         <main>
             <Space direction="vertical" align="center" size={50}>
                 <Logo />
-                {!isAuthenticated && (
+                {!isAuthenticated ? (
                     <Btn type="link" path="./login">
                         <LoginOutlined />
                         Login
+                    </Btn>
+                ) : (
+                    <Btn type="link" path={`./statistics/${operatorId}`}>
+                        Go to profile
                     </Btn>
                 )}
             </Space>
