@@ -30,3 +30,14 @@ export interface LinkBtnProps {
     loading?: boolean;
     onClick?: () => void;
 }
+
+export interface Call {
+    id: string;
+    operatorId: string;
+    operatorName: string;
+    date: string;
+    rating: number;
+    duration: number;
+    callType: 'Inbound' | 'Outbound';
+    comment: string;
+}
