@@ -10,7 +10,8 @@ It is used mock server with mock operators and calls data.
 
 You can login with test data and test site work:
 
-```{
+```
+    {
         id: 'op-1',
         name: 'Ivan Ivanov',
         email: 'ivanov@test.com',
