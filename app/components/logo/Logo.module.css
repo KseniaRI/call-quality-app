@@ -1,0 +1,20 @@
+.logoWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-m);
+}
+.logoTitle {
+    text-transform: uppercase;
+    text-align: center;
+}
+.logoIcon {
+    font-size: 60px;
+    color: var(--accent-color);
+}
+
+@media (max-width: 650px) {
+    .logoWrap {
+        flex-direction: column;
+    }
+}

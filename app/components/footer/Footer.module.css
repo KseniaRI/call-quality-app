@@ -1,0 +1,18 @@
+.footer {
+    grid-row-start: 3;
+}
+.footer a {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-s);
+    width: 100%;
+    color: var(--foreground);
+    transition: color 0.2s;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    .footer a:hover {
+        color: var(--accent-color);
+    }
+}

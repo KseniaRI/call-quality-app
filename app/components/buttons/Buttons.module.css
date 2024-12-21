@@ -1,0 +1,27 @@
+main .button:disabled,
+main .button:not([disabled]),
+header .button:disabled,
+header .button:not([disabled]) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 20px;
+    height: 48px;
+    min-width: fit-content;
+    max-width: 100px;
+    padding: 0 20px;
+    border: 1px solid var(--gray-alpha-200);
+    border-radius: var(--radius-l);
+    font-weight: 500;
+    color: var(--foreground);
+    transition: background 0.8s, color 0.2s, border-color 0.2s;
+}
+/*Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    main .button:not([disabled]):not(.ant-btn-disabled):hover,
+    header .button:not([disabled]):not(.ant-btn-disabled):hover {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+}
